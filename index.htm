@@ -8,75 +8,45 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <meta name="description" content="Comprehensive wellness platform for seniors offering health tracking, social connections, and personalized wellness programs.">
     <style>
-        /* Base font sizes for better readability */
+        /* Art Deco inspired styling */
         body {
             font-size: 20px;
             line-height: 1.6;
-            font-family: Arial, sans-serif;
-            color: #333;
+            font-family: 'Playfair Display', serif;
+            color: #2c3e50;
+            background-color: #f5f5f5;
         }
         
         h1 {
             font-size: 3.5rem;
             margin-bottom: 1.5rem;
             color: #2c3e50;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
         
         h2 {
             font-size: 3rem;
             margin-bottom: 1.5rem;
             color: #2c3e50;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
         }
         
         h3 {
             font-size: 2.5rem;
             margin-bottom: 1.25rem;
             color: #2c3e50;
+            font-weight: 600;
         }
         
         p {
             font-size: 1.5rem;
             margin-bottom: 1.25rem;
         }
-        
-        .feature-card p, .wellness-card p {
-            font-size: 1.4rem;
-        }
-        
-        .community-features li {
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
-        }
-        
-        .btn {
-            font-size: 1.4rem;
-            padding: 1rem 2rem;
-        }
-        
-        .nav-links a {
-            font-size: 1.4rem;
-        }
-        
-        .footer-section h3 {
-            font-size: 2rem;
-        }
-        
-        .footer-section a {
-            font-size: 1.3rem;
-        }
 
-        /* Adjust bullet points to appear after descriptions */
-        .community-features {
-            margin-top: 2rem;
-            padding-left: 2rem;
-        }
-        
-        .community-features li {
-            list-style-type: disc;
-            margin-bottom: 1rem;
-        }
-
-        /* Additional styling for better readability */
         .main-header {
             background-color: #fff;
             padding: 1rem 0;
@@ -84,22 +54,54 @@
         }
 
         .hero {
-            background-color: #f8f9fa;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
             padding: 4rem 0;
+            position: relative;
         }
 
-        .feature-grid, .wellness-grid {
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #e74c3c, #3498db, #2ecc71);
+        }
+
+        .feature-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             padding: 2rem;
         }
 
-        .feature-card, .wellness-card {
+        .feature-card {
             background: #fff;
             padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-radius: 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-left: 4px solid #e74c3c;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .wellness-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .wellness-card {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-top: 4px solid #3498db;
         }
 
         .community-content {
@@ -107,14 +109,27 @@
             grid-template-columns: 1fr 1fr;
             gap: 2rem;
             align-items: center;
+            padding: 2rem;
+            background: #fff;
         }
 
-        .contact-form input,
-        .contact-form textarea {
-            font-size: 1.4rem;
-            padding: 1rem;
+        .community-features {
+            margin-top: 2rem;
+            padding-left: 2rem;
+        }
+        
+        .community-features li {
+            list-style-type: none;
             margin-bottom: 1rem;
-            width: 100%;
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .community-features li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #e74c3c;
         }
 
         .main-footer {
@@ -127,6 +142,27 @@
             color: #fff;
             font-size: 1.5rem;
             margin-right: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #e74c3c;
+        }
+
+        .btn {
+            font-size: 1.4rem;
+            padding: 1rem 2rem;
+            border: none;
+            background: #e74c3c;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
         }
     </style>
 </head>
@@ -147,7 +183,6 @@
                 <li><a href="#wellness">Wellness</a></li>
                 <li><a href="#community">Community</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -247,33 +282,6 @@
                         <h3>Michael Chen</h3>
                         <p>Wellness Coach</p>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="contact">
-            <h2>Contact Us</h2>
-            <div class="contact-container">
-                <form class="contact-form" action="#" method="POST">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
-                <div class="contact-info">
-                    <h3>Get in Touch</h3>
-                    <p><i class="fas fa-phone" aria-hidden="true"></i> (555) 123-4567</p>
-                    <p><i class="fas fa-envelope" aria-hidden="true"></i> info@60pluswellness.com</p>
-                    <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> 123 Wellness Way, Health City, HC 12345</p>
                 </div>
             </div>
         </section>
