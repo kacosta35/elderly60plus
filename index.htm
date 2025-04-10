@@ -6,78 +6,85 @@
     <title>60+ Wellness Hub - Your Path to Healthy Aging</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <meta name="description" content="Comprehensive wellness platform for seniors offering health tracking, social connections, and personalized wellness programs.">
     <style>
-        /* Art Deco inspired styling */
+        /* Modern Art Deco inspired styling */
         :root {
             --primary-color: #2c3e50;
             --accent-color: #e74c3c;
             --secondary-color: #3498db;
-            --background-color: #f5f5f5;
+            --background-color: #f8f9fa;
             --text-color: #2c3e50;
+            --gold: #d4af37;
+            --black: #1a1a1a;
         }
 
         body {
-            font-size: 20px;
+            font-size: 18px;
             line-height: 1.6;
-            font-family: 'Playfair Display', serif;
+            font-family: 'Montserrat', sans-serif;
             color: var(--text-color);
             background-color: var(--background-color);
             margin: 0;
             padding: 0;
+            background-image: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
         }
         
         h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
             color: var(--primary-color);
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 2px;
             text-align: center;
             position: relative;
+            font-family: 'Playfair Display', serif;
         }
 
         h1::after {
             content: '';
             display: block;
-            width: 100px;
-            height: 4px;
-            background: var(--accent-color);
-            margin: 1rem auto;
+            width: 60px;
+            height: 3px;
+            background: var(--gold);
+            margin: 0.5rem auto;
         }
         
         h2 {
-            font-size: 3rem;
+            font-size: 2.2rem;
             margin-bottom: 1.5rem;
             color: var(--primary-color);
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1.5px;
             text-align: center;
+            font-family: 'Playfair Display', serif;
         }
         
         h3 {
-            font-size: 2.5rem;
-            margin-bottom: 1.25rem;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
             color: var(--primary-color);
             font-weight: 600;
+            font-family: 'Playfair Display', serif;
         }
         
         p {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             margin-bottom: 1.25rem;
         }
 
         .main-header {
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.95);
             padding: 1rem 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
+            backdrop-filter: blur(10px);
         }
 
         .main-nav {
@@ -103,14 +110,15 @@
         .nav-links a {
             text-decoration: none;
             color: var(--primary-color);
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             text-transform: uppercase;
             letter-spacing: 1px;
             transition: color 0.3s ease;
+            font-weight: 600;
         }
 
         .nav-links a:hover {
-            color: var(--accent-color);
+            color: var(--gold);
         }
 
         main {
@@ -124,6 +132,9 @@
             margin-bottom: 4rem;
             text-align: center;
             position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
         }
 
         .tribute-section::before {
@@ -133,23 +144,25 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
+            background: linear-gradient(90deg, var(--gold), var(--accent-color));
         }
 
         .tribute-content {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
         }
 
         .tribute-content p {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             line-height: 1.8;
             margin-bottom: 2rem;
+            text-align: justify;
+            padding: 0 2rem;
         }
 
         .feature-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(4, 1fr);
             gap: 2rem;
             padding: 2rem;
             max-width: 1200px;
@@ -161,7 +174,7 @@
             padding: 2rem;
             border-radius: 0;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            border-left: 4px solid var(--accent-color);
+            border-left: 4px solid var(--gold);
             transition: transform 0.3s ease;
             text-align: center;
         }
@@ -172,13 +185,21 @@
 
         .feature-card i {
             font-size: 2.5rem;
-            color: var(--accent-color);
+            color: var(--gold);
             margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.6rem;
+        }
+
+        .feature-card p {
+            font-size: 1.1rem;
         }
 
         .wellness-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
             padding: 2rem;
             max-width: 1200px;
@@ -190,15 +211,23 @@
             padding: 2rem;
             border-radius: 0;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            border-top: 4px solid var(--secondary-color);
+            border-top: 4px solid var(--gold);
             text-align: center;
         }
 
         .wellness-card img {
             width: 100%;
-            height: auto;
+            height: 250px;
             margin-bottom: 1rem;
             object-fit: cover;
+        }
+
+        .wellness-card h3 {
+            font-size: 1.6rem;
+        }
+
+        .wellness-card p {
+            font-size: 1.1rem;
         }
 
         .community-content {
@@ -210,6 +239,15 @@
             background: #fff;
             max-width: 1200px;
             margin: 0 auto;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .community-text h2 {
+            font-size: 2rem;
+        }
+
+        .community-text p {
+            font-size: 1.2rem;
         }
 
         .community-features {
@@ -222,18 +260,18 @@
             margin-bottom: 1rem;
             position: relative;
             padding-left: 2rem;
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         .community-features li::before {
             content: '→';
             position: absolute;
             left: 0;
-            color: var(--accent-color);
+            color: var(--gold);
         }
 
         .main-footer {
-            background-color: var(--primary-color);
+            background-color: var(--black);
             color: #fff;
             padding: 3rem 0;
             margin-top: 4rem;
@@ -249,8 +287,9 @@
         }
 
         .footer-section h3 {
-            color: #fff;
+            color: var(--gold);
             margin-bottom: 1rem;
+            font-size: 1.6rem;
         }
 
         .footer-section ul {
@@ -263,10 +302,11 @@
             color: #fff;
             text-decoration: none;
             transition: color 0.3s ease;
+            font-size: 1.1rem;
         }
 
         .footer-section a:hover {
-            color: var(--accent-color);
+            color: var(--gold);
         }
 
         .social-links {
@@ -281,7 +321,7 @@
         }
 
         .social-links a:hover {
-            color: var(--accent-color);
+            color: var(--gold);
         }
 
         .footer-bottom {
@@ -353,12 +393,12 @@
                     <p>Improve flexibility and balance with age-appropriate yoga routines</p>
                 </div>
                 <div class="wellness-card">
-                    <img src="images/meditation.jpg" alt="Group meditation session">
+                    <img src="images/meditation.jpeg" alt="Group meditation session">
                     <h3>Mindfulness</h3>
                     <p>Learn meditation techniques for stress reduction and mental clarity</p>
                 </div>
                 <div class="wellness-card">
-                    <img src="images/nutrition.jpg" alt="Healthy meal preparation">
+                    <img src="images/nutrition.jpeg" alt="Healthy meal preparation">
                     <h3>Nutrition Guidance</h3>
                     <p>Get personalized meal plans and dietary recommendations</p>
                 </div>
@@ -378,7 +418,7 @@
                     </ul>
                 </div>
                 <div class="community-image">
-                    <img src="images/community.jpg" alt="Seniors socializing and having fun">
+                    <img src="images/coffee.jpeg" alt="Seniors enjoying coffee together">
                 </div>
             </div>
         </section>
