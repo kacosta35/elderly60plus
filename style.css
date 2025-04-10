@@ -139,11 +139,13 @@ section h2::after {
     background: var(--secondary-color);
 }
 
+/* Updated Image Styling */
 section img {
-    max-width: 100%;
+    max-width: 400px;
     height: auto;
-    border-radius: 0;
-    margin-bottom: 1.5rem;
+    display: block;
+    margin: 0 auto 1.5rem auto;
+    border-radius: 8px;
     border: 3px solid var(--border-color);
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
@@ -164,21 +166,70 @@ footer {
     border-top: 5px solid var(--border-color);
 }
 
-/* Art Deco Decorative Elements */
-.container {
-    position: relative;
+/* Tribute Section Styling */
+.tribute-section {
+    background-color: #fff9e6;
+    margin-top: 0;
+    padding: 3rem 0;
+    text-align: center;
 }
 
-section {
-    overflow: hidden;
+.tribute-section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
 }
 
-section::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 50px;
-    height: 50px;
-    background: linear-gradient(135deg, var(--border-color) 25%, transparent 25%);
+.tribute-text {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tribute-text h2 {
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Times New Roman', serif;
+}
+
+.tribute-message {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    font-style: italic;
+    padding: 0 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.3rem 0;
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+
+    section img {
+        max-width: 100%;
+        width: 300px;
+    }
+
+    .tribute-text h2 {
+        font-size: 2rem;
+    }
 }
